@@ -31,7 +31,7 @@ This is the main setting in our paper. Technically speaking you can also use the
 After getting the pretrained weight you can run the meta-testing as follow:
 
 ```shell script
-python test_extractor_pa_vit_prefix.py --data.test ilsvrc_2012 omniglot aircraft cu_birds dtd quickdraw fungi vgg_flower traffic_sign mscoco
+python test_extractor_pa_vit_prefix.py --data.test ilsvrc_2012 omniglot aircraft cu_birds dtd quickdraw fungi vgg_flower traffic_sign mscoco --model.ckpt {WEIGHT PATH}
 ```
 The code adopts ViT-small as default backbone structure can be modified according to your requirement.  
 
