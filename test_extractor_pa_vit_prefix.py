@@ -44,7 +44,7 @@ def main():
     test_loader = MetaDatasetEpisodeReader('test', trainsets, trainsets, testsets, test_type=args['test.type'], gin_file_name='meta_dataset_config_vit.gin')
     model = vit_small_adapter(global_pool=False)
     
-    ckpt = torch.load('./vit_small_dino.pth')['student']
+    ckpt = torch.load(args['data.ckpt'])['student']
     new_dict = {}
     for k, v in ckpt.items():
         if 'backbone' in k:

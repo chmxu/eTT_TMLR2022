@@ -17,6 +17,7 @@ parser.add_argument('--data.num_workers', type=int, default=32, metavar='NEPOCHS
 default_model_name = 'noname'
 parser.add_argument('--model.name', type=str, default=default_model_name, metavar='MODELNAME',
                     help="A name you give to the extractor".format(default_model_name))
+parser.add_argument('--model.ckpt', type=str, default=None)
 parser.add_argument('--model.backbone', default='resnet18', help="Use ResNet18 for experiments (default: False)")
 parser.add_argument('--model.classifier', type=str, default='linear', choices=['none', 'linear', 'cosine'], help="Do classification using cosine similatity between activations and weights")
 parser.add_argument('--model.dropout', type=float, default=0, help="Adding dropout inside a basic block of widenet")
